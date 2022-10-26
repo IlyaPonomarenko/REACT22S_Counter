@@ -1,5 +1,7 @@
 import "./Main.css";
+import Button from "./Button.js"
 import React, { Component } from "react";
+
 
 class Main extends Component {
   state = {
@@ -30,13 +32,13 @@ class Main extends Component {
     this.setState({ counter: 0 });
   };
   render() {
-    let circleClass=""
-    if (this.state.counter === 0){
-      circleClass="circle"
-    } else if(this.state.counter % 2 === 0) {
-      circleClass="circle even"
+    let circleClass = "";
+    if (this.state.counter === 0) {
+      circleClass = "circle";
+    } else if (this.state.counter % 2 === 0) {
+      circleClass = "circle even";
     } else {
-      circleClass="circle odd"
+      circleClass = "circle odd";
     }
     return (
       <main>
@@ -49,11 +51,12 @@ class Main extends Component {
         </div>
 
         <div className="btns">
-          <button onClick={this.addFiveHandler}>Add Five</button>
-          <button onClick={this.addOneHandler}>Add One</button>
-          <button onClick={this.resetHandler}>Reset</button>
-          <button onClick={this.removeOneHandler}>Remove One</button>
-          <button onClick={this.removeFiveHandler}>Remove Five</button>
+          <Button click={this.addFiveHandler}>Add Five</Button>
+          <Button click={this.addOneHandler}>Add One</Button>
+          <Button click={this.resetHandler}>Reset</Button>
+          <Button click={this.removeOneHandler}>Remove One</Button>
+          <Button click={this.removeFiveHandler}>Remove Five</Button>
+          
         </div>
       </main>
     );

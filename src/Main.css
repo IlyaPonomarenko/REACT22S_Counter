@@ -14,6 +14,12 @@
   margin: 1em; 
   color: white; 
 }
+.even{
+  background:#6bf7df;
+}
+.odd{
+background: #33776b;
+}
 .counter{
     font-size: 8em;
 }
